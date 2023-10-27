@@ -1,6 +1,6 @@
 <template>
   <!-- Display the value of the 'msg' prop in an <h1> element -->
-  <h1>{{ msg }}</h1>
+  <h2>{{ msg }}</h2>
 
   <div class="card">
     <!-- Display a button and bind a click event to the 'incrementCount' method -->
@@ -9,12 +9,20 @@
     <button @click="decrementCount">Decrement</button>
     <!-- Display the current value of the 'count' variable -->
   </div>
+  <div>
+    <button @click="concatWord">concate data</button>
+    {{ someVariable }}
+    <button @click="removeConcat">remove concat</button>
+  </div>
+
+<!-- computed properties -->
+<!-- watchers -->
 </template>
 
 <script>
 export default {
   // Define the component and specify its props
-  props:['msg',],
+  props: ["msg"],
   // props: {
   //   msg: String,
   // },
@@ -22,6 +30,7 @@ export default {
   data() {
     return {
       count: 0, // Initialize the 'count' variable with a value of 0
+      someVariable: "abc",
     };
   },
 
@@ -33,6 +42,14 @@ export default {
     },
     decrementCount() {
       this.count--;
+    },
+    concatWord() {
+      this.someVariable += "abc2";
+    },
+    removeConcat() {
+      if (this.someVariable.length > 3) {
+        this.someVariable = this.someVariable.slice(0, -4);
+      }
     },
   },
 };

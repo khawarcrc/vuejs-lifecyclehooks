@@ -1,10 +1,13 @@
 <template>
-  <h1>Hello World component</h1>
-  <HelloWorld msg="pass prop" />
+  <HelloWorld msg="prop data method" />
+  <LifeCycleVue />
+  <ComputedVue/>
 </template>
 
 <script setup>
+import ComputedVue from "./components/Computed.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import LifeCycleVue from "./components/LifeCycle.vue";
 </script>
 
 <style scoped>
