@@ -2,12 +2,14 @@
   <HelloWorld msg="prop data method" />
   <LifeCycleVue />
   <ComputedVue/>
+  <ParentComponent/>
 </template>
 
 <script setup>
 import ComputedVue from "./components/Computed.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import LifeCycleVue from "./components/LifeCycle.vue";
+import ParentComponent from "./components/ParentComponent.vue"
 </script>
 
 <style scoped>
